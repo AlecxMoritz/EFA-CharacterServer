@@ -27,14 +27,10 @@ const updateCharacter = async (req, res) => {
     res.status(201).send({ ok: true, message: "No character found." });
   }
 
-  console.log(dbChar.UserId);
-  console.log(req.callingUser)
   if ((dbChar.UserId !== req.callingUser) && !isAdmin) {
     res.status(401).send({ ok: true, message: "You are not authorized to perform this action." });
     return;
   }
-
-  // update modifiers if need be
 
   Character.update({
     ...characterUpdate,

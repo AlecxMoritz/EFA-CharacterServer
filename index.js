@@ -8,6 +8,7 @@ const db = require('./db');
 db.sync();
 
 const app = express();
+app.use(require('./middleware/headers'));
 
 app.use(express.json());
 
