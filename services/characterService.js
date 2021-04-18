@@ -1,11 +1,15 @@
 const db = require('../db');
 const Character = db.models.Character;
+const censorString = require('../helpers/censor');
 
 const createCharacter = (req, res) => {
 // generate modifiers if need be
 console.log(req.callingUser);
   const newCharacter = {
     ...req.body.character,
+    name: censorString(req.body.character.name),
+    bio: censorString(req.body.character.bio),
+    faction: censorString(req.body.character.faction),
     UserId: req.callingUser,
   };
 
