@@ -45,21 +45,21 @@ int: integer;
 
 ```
 {
-	"user": {
-		"name": "Lil Nas X",
-		"email": "lil@nas.x",
-		"password": "montero"
-	}
+  "user": {
+    "name": "Lil Nas X",
+    "email": "lil@nas.x",
+    "password": "montero"
+  }
 }
 ```
 
 #### POST /sign-in
 ```
 {
-	"credentials": {
-		"email": "lil@nas.x",
-		"password":"montero"
-	}
+  "credentials": {
+    "email": "lil@nas.x",
+    "password":"montero"
+  }
 }
 ```
 
@@ -69,11 +69,11 @@ no body for request
 #### PUT /update/[id]
 ```
 {
-	"user": {
-		"name": "Lil Nas X",
-		"email": "lil@nas.x",
-		"password": "oldtownroad"
-	}
+  "user": {
+     "name": "Lil Nas X",
+     "email": "lil@nas.x",
+     "password": "oldtownroad"
+   }
 }
 ```
 
@@ -85,25 +85,25 @@ No request body. This route must be called by an admin user to elevate another u
 #### POST /new
 ```
 {
-	"character": {
-		"name": "Cheff Goldbloom",
-		"bio": "watching out for hot butter",
-        "faction": "Tim and Eric"
-	}
+  "character": {
+    "name": "Cheff Goldbloom",
+    "bio": "watching out for hot butter",
+    "faction": "Tim and Eric"
+  }
 }
 ```
 
 #### PUT /edit/[id]
 ```
 {
-	"character": {
-		"name": "Cheff Goldbloom",
-		"bio": "watching out for hot butter",
-        "faction": "Tim and Eric",
-        "int": 16,
-        "wis": 16,
-        "chr": 20
-	}
+  "character": {
+    "name": "Cheff Goldbloom",
+    "bio": "watching out for hot butter",
+    "faction": "Tim and Eric",
+    "int": 16,
+    "wis": 16,
+    "chr": 20
+  }
 }
 ```
 
